@@ -1,4 +1,4 @@
-import './App.css';
+import './Iris.css';
 import React,{useState} from 'react';
 import axios from 'axios';
 const App=()=> {
@@ -6,12 +6,15 @@ const App=()=> {
   const handleSubmit= async(e)=>{
     e.preventDefault();
     const values=e.target.elements;
+    console.log(values)
     const request={
-      'Sepal_Length':values.Sepal_Length.value,
+      'Sepal_Length1':values.Sepal_Length.value,
       'Sepal_Width':values.Sepal_Width.value,
       'Petal_Length':values.Petal_Length.value,
       'Petal_Width':values.Petal_Width.value
     };
+
+    
     try{
       const response=await axios.post('http://localhost:5000/predict',request);
       setResult(response.data.prediction);
@@ -28,6 +31,7 @@ const App=()=> {
             <div className="card-header">
                 <div>
                     <h3>Classifier</h3>
+                    
                 </div>
             </div>
             <div className="card-body">
