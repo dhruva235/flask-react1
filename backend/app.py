@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 flask_app = Flask(__name__)
 model = pickle.load(open("model.pkl", "rb"))
 admissionModel= pickle.load(open("model1.pkl", "rb"));
-admissionScaler=StandardScaler()
+admissionScaler=pickle.load(open("scaler1.pkl","rb"))
 cors = CORS(flask_app)
 @flask_app.route("/")
 def Home():
@@ -45,15 +45,10 @@ def predict1():
         requestData=request.json
         print(requestData);
         float_features = [float(x) for x in requestData.values()]
-       
         features = [np.array(float_features)]
-       
-        print('The features before :',features)
-        admissionScaler.fit_transform(features) 
-        print('The features after :',features)
-       
+        features= admissionScaler.transform(features)
         prediction = admissionModel.predict(features)
-        response['prediction']=round(100*prediction[0])
+        response['prediction']=prediction[0]
         response['status']=200
     except:
         response['status']=500
