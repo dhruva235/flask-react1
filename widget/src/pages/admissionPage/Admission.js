@@ -44,39 +44,39 @@ const App=()=> {
                     <label htmlFor="GRE Score">GRE Score</label>
                     <div className="input-group form-group">
 
-                        <input type="number" id="GRE Score" className="form-control"  name="GRE Score"  required/>
+                        <input step="0.01"type="number" id="GRE Score" className="form-control"  name="GRE Score"  required/>
                     </div>
                     <label htmlFor="TOEFL Score">TOEFL Score</label>
                     <div className="input-group form-group">
 
-                        <input type="number" id="TOEFL Score" className="form-control"  name="TOEFL Score"  required/>
+                        <input step="0.01"type="number" id="TOEFL Score" className="form-control"  name="TOEFL Score"  required/>
                     </div>
                     <label htmlFor="University Rating">University Rating</label>
                     <div className="input-group form-group">
 
-                        <input type="number" id="University Rating" className="form-control"  name="University Rating"  required/>
+                        <input step="0.01"type="number" id="University Rating" className="form-control"  name="University Rating"  required/>
                     </div>
                     <label htmlFor="SOP">SOP</label>
                     <div className="input-group form-group">
 
-                        <input type="number" id="SOP" className="form-control"  name="SOP"  required/>
+                        <input step="0.01"type="number" id="SOP" className="form-control"  name="SOP"  required/>
                     </div>
 {/* 
  */}
         <label htmlFor="LOR">LOR</label>
                     <div className="input-group form-group">
 
-                        <input type="number" id="LOR" className="form-control"  name="LOR"  required/>
+                        <input step="0.01"type="number" id="LOR" className="form-control"  name="LOR"  required/>
                     </div>
                     <label htmlFor="CGPA">CGPA</label>
                     <div className="input-group form-group">
 
-                        <input type="number" id="CGPA" className="form-control"  name="CGPA"  required/>
+                        <input step="0.01"type="number" id="CGPA" className="form-control"  name="CGPA"  required/>
                     </div>
                     <label htmlFor="Research">Research</label>
                     <div className="input-group form-group">
 
-                        <input type="number" id="Research" className="form-control"  name="Research"  required/>
+                        <input step="0.01"type="number" id="Research" className="form-control"  name="Research"  required/>
                     </div>
 
                     <div className="form-group text-center">
